@@ -2,9 +2,8 @@
   "name": "joi-pesel",
   "version": "1.0.0",
   "description": "PESEL validation rule for Joi",
-  "main": "index.ts",
+  "main": "lib/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -23,5 +22,8 @@
   "homepage": "https://github.com/MariuszBak/joi-pesel#readme",
   "dependencies": {
     "@hapi/joi": "^17.1.1"
+  },
+  "devDependencies": {
+    "@types/hapi__joi": "^17.1.6"
   }
 }
