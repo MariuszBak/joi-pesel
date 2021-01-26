@@ -1,10 +1,9 @@
 {
   "name": "joi-pesel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PESEL validation rule for Joi",
   "main": "lib/index.ts",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MariuszBak/joi-pesel.git"

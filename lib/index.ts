@@ -1,5 +1,3 @@
-import Joi from "@hapi/joi";
-
 const isValidPesel = (pesel: string): boolean => {
 
     // checking length and structure
@@ -17,24 +15,24 @@ const isValidPesel = (pesel: string): boolean => {
     return 10 - (checksum === 0 ? 10 : checksum) === control;
 }
 
-export const JoiPesel = Joi.extend(
-    (joi) => {
-        return {
-            type: 'string',
-            base: joi.string(),
-            messages: {
-                'string.pesel': '"{{#label}}" is incorrect',
-            },
-            rules: {
-                pesel: {
-                    validate(value, {error}) {
-                        if(!isValidPesel(value)) {
-                            return error('string.pesel', {value});
-                        }
-                        return value;
-                    },
+export const JoiPesel = (joi: any) => {
+    return {
+        type: 'string',
+        base: joi.string(),
+        messages: {
+            'string.pesel': '"{{#label}}" is incorrect',
+        },
+        rules: {
+            pesel: {
+                validate(value, { error }) {
+                    if (!isValidPesel(value)) {
+                        return error('string.pesel', { value });
+                    }
+                    return value;
                 },
             },
-        }
+        },
     }
-);
+}
+
+export default { JoiPesel };
