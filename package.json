@@ -1,0 +1,27 @@
+{
+  "name": "joi-pesel",
+  "version": "1.0.0",
+  "description": "PESEL validation rule for Joi",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariuszBak/joi-pesel.git"
+  },
+  "keywords": [
+    "joi",
+    "pesel",
+    "extension"
+  ],
+  "author": "Mariusz Bak <m.bak.zabrze@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MariuszBak/joi-pesel/issues"
+  },
+  "homepage": "https://github.com/MariuszBak/joi-pesel#readme",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1"
+  }
+}
