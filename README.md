@@ -4,10 +4,10 @@
 `npm install joi-pesel`
 ## How to use
 ```typescript
-import Joi from '@hapi/joi';
-import { JoiPesel } from 'joi-pesel';
+import Joi from 'joi';
+import JoiPesel from 'joi-pesel';
 
-const peselJoi = Joi.extend(JoiPesel);
+const joiPesel = Joi.extend(JoiPesel);
 
-peselJoi.string().pesel().validate('12345678901');
+joiPesel.string().pesel().validate('12345678901');
 ```
