@@ -1,9 +1,11 @@
 {
   "name": "joi-pesel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "PESEL validation rule for Joi",
-  "main": "lib/index.ts",
-  "scripts": {},
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MariuszBak/joi-pesel.git"
@@ -20,5 +22,7 @@
   },
   "homepage": "https://github.com/MariuszBak/joi-pesel#readme",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
 }

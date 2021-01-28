@@ -20,11 +20,11 @@ export const JoiPesel = (joi: any) => {
         type: 'string',
         base: joi.string(),
         messages: {
-            'string.pesel': '"{{#label}}" is incorrect',
+            'string.pesel': '{{#label}} is incorrect',
         },
         rules: {
             pesel: {
-                validate(value, { error }) {
+                validate(value: string, { error }: any) {
                     if (!isValidPesel(value)) {
                         return error('string.pesel', { value });
                     }
@@ -35,4 +35,4 @@ export const JoiPesel = (joi: any) => {
     }
 }
 
-export default { JoiPesel };
+export default JoiPesel;
