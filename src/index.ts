@@ -3,8 +3,12 @@ const isValidPesel = (pesel: string): boolean => {
     // checking length and structure
     if (/^[\d]{11}$/.test(pesel) == false) return false;
 
-    // checking month and day
-    if ((parseInt(pesel.substring(2, 4)) > 12) || (parseInt(pesel.substring(4, 6)) > 31)) return false;
+    // checking month (from 2000 year month = month + 20) and day
+    const month = parseInt(pesel.substring(2, 4));
+    if (month < 1 || month > 31) return false;
+    const day = parseInt(pesel.substring(4, 6));
+    if (day < 1 || day > 32 || (day > 12 && day < 20)) return false;
+    // if ((parseInt(pesel.substring(2, 4)) > 32) || (parseInt(pesel.substring(4, 6)) > 31)) return false;
 
     // checking checksum
     const weight = [1, 3, 7, 9];
