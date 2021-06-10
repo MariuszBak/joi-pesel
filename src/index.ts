@@ -5,9 +5,9 @@ const isValidPesel = (pesel: string): boolean => {
 
     // checking month (from 2000 year month = month + 20) and day
     const month = parseInt(pesel.substring(2, 4));
-    if (month < 1 || month > 31) return false;
+    if (month < 1 || month > 32 || (month > 12 && month < 20)) return false;
     const day = parseInt(pesel.substring(4, 6));
-    if (day < 1 || day > 32 || (day > 12 && day < 20)) return false;
+    if (day < 1 || day > 31) return false;
 
     // checking checksum
     const weight = [1, 3, 7, 9];
